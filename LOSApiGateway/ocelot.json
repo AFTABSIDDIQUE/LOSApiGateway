@@ -1,0 +1,971 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Auth/FetchLogin",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5196
+        }
+      ],
+      "UpstreamPathTemplate": "/login",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Priority": 1
+    },
+    {
+      "DownstreamPathTemplate": "/api/Bank/FetchBanks",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchBank",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Bank/AddBank",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/AddBank",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Bank/UpdateBank",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/UpdateBank",
+      "UpstreamHttpMethod": [ "Put" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Bank/DeleteBank/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/DeleteBank/{id}",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Bank/FetchBankById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchBank/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Branch/FetchBranches",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchBranch",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Branch/AddBranch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/AddBranch",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Branch/UpdateBranch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/UpdateBranch",
+      "UpstreamHttpMethod": [ "Put" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Branch/DeleteBranch/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/DeleteBranch/{id}",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Branch/FetchBranchById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchBranch/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/City/AddCity",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/AddCity",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/City/FetchCities",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchCities",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/City/UpdateCity",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/UpdateCity",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/City/FetchCityById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchCityById/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/City/DeleteCity/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/DeleteCity/{id}",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Country/FetchCountry",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchCountry",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Country/AddCountry",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/AddCountry",
+      "UpstreamHttpMethod": [ "POST" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Country/UpdateCountry",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/UpdateCountry",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Country/DeleteCountry/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/DeleteCountry/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Country/FetchCountryById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchCountryById/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Department/FetchDepartments",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchDepartment",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Department/AddDepartment",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/AddDepartment",
+      "UpstreamHttpMethod": [ "POST" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Department/UpdateDepartment",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/UpdateDepartment",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Department/DeleteDepartment/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/DeleteDepartment/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Department/FetchDepartmentById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchDepartment/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/DocumentType/FetchDocumentTypes",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchDocumentType",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/DocumentType/AddDocumentType",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/AddDocumentType",
+      "UpstreamHttpMethod": [ "POST" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/DocumentType/UpdateDocumentType",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/UpdateDocumentType",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/DocumentType/DeleteDocumentType/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/DeleteDocumentType/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/DocumentType/FetchDocumentTypeById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchDocument/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/EmployementType/FetchEmploymentTypes",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchEmploymentType",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/EmployementType/AddEmploymentType",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/AddEmploymentType",
+      "UpstreamHttpMethod": [ "POST" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/EmployementType/UpdateEmploymentType",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/UpdateEmploymentType",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/EmployementType/DeleteEmploymentType/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/DeleteEmploymentType/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/EmployementType/FetchEmploymentTypeById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchEmployement/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Module/ViewModules",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/ViewModules",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Module/AddModule",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/AddModule",
+      "UpstreamHttpMethod": [ "POST" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Module/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/Module/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/OccupationType/FetchOccupationTypes",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchOccupationTypes",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/OccupationType/AddOccupationType",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/AddOccupationType",
+      "UpstreamHttpMethod": [ "POST" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/OccupationType/UpdateOccupationType",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/UpdateOccupationType",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/OccupationType/DeleteOccupationType/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/DeleteOccupationType/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/OccupationType/FetchOccupationTypeById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchOccupationType/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Pincode/FetchPincode",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchPincode",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Pincode/AddPincode",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/AddPincode",
+      "UpstreamHttpMethod": [ "POST" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Pincode/UpdatePincode",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/UpdatePincode",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Pincode/DeletePincode/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/DeletePincode/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Pincode/FetchPincodeById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchPincode/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/RejectionReason/FetchRejectionReason",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchRejectionReason",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/RejectionReason/AddRejectionReason",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/AddRejectionReason",
+      "UpstreamHttpMethod": [ "POST" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/RejectionReason/UpdateRejectionReason",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/UpdateRejectionReason",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/RejectionReason/DeleteRejectionReason/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/DeleteRejectionReason/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/RejectionReason/FetchRejectionReasonById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchRejectionReasonById/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Roles/FetchRoles",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchRole",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Roles/AddRole",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/AddRole",
+      "UpstreamHttpMethod": [ "POST" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Roles/UpdateRole",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/UpdateRole",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Roles/DeleteRole/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/DeleteRole/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/Roles/FetchRoleById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchRole/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/State/FetchStates",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchStates",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/State/AddState",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/AddState",
+      "UpstreamHttpMethod": [ "POST" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/State/UpdateState",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/UpdateState",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/State/DeleteState/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/DeleteState/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/State/FetchStateById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchState/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/FetchUser",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchUser",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/AddUser",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/AddUser",
+      "UpstreamHttpMethod": [ "POST" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/UpdateUser",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/UpdateUser",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/DeleteUser/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/DeleteUser/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/FetchUserById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchUser/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/UserRoles/FetchUserRoles",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchUserRole",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/UserRoles/AddUserRole",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/AddUserRole",
+      "UpstreamHttpMethod": [ "POST" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/UserRoles/UpdateUserRole",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/UpdateUserRole",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/UserRoles/DeleteUserRole",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/DeleteUserRole",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "Priority": 2
+    },
+    {
+      "DownstreamPathTemplate": "/api/UserRoles/FetchUserRoleById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5147
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchUserRole/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Priority": 2
+    }
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7001"
+  }
+
+}
