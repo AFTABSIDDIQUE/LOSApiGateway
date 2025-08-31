@@ -9,9 +9,22 @@
           "Port": 5196
         }
       ],
-      "UpstreamPathTemplate": "/login",
+      "UpstreamPathTemplate": "/auth",
       "UpstreamHttpMethod": [ "Post" ],
       "Priority": 1
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 4200
+        }
+      ],
+      "UpstreamPathTemplate": "/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS" ],
+      "Priority": 3
     },
     {
       "DownstreamPathTemplate": "/api/Bank/FetchBanks",
